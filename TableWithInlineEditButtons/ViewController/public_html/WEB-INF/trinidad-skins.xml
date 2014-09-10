@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skins xmlns="http://myfaces.apache.org/trinidad/skin">
+  <skin>
+    <id>tableSkin.desktop</id>
+    <family>tableSkin</family>
+    <extends>skyros-v1.desktop</extends>
+    <render-kit-id>org.apache.myfaces.trinidad.desktop</render-kit-id>
+    <style-sheet-name>skins/tableSkin/tableSkin.css</style-sheet-name>
+    <bundle-name>com.agawish.ux.view.skinBundle</bundle-name>
+  </skin>
+</skins>

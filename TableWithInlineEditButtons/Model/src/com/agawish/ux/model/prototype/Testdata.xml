@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+<AppModule
+  xmlns="http://xmlns.oracle.com/placeholder"
+  Name="Testdata"
+  Version="12.1.3.10.8"
+  InheritPersonalization="merge">
+  <ViewUsage
+    Name="Employees"
+    ViewObjectName="com.agawish.ux.model.prototype.Employees"/>
+</AppModule>

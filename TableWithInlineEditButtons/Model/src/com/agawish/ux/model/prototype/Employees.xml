@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/placeholder"
+  Name="Employees"
+  Version="12.1.3.10.8"
+  InheritPersonalization="merge"
+  BindingStyle="OracleName"
+  CustomQuery="true">
+  <ViewAttribute
+    Name="employeeID"
+    Type="oracle.jbo.domain.Number"/>
+  <ViewAttribute
+    Name="Name"
+    Type="java.lang.String"/>
+  <ViewAttribute
+    Name="JobDescription"
+    Type="java.lang.String"/>
+  <ViewAttribute
+    Name="checked"
+    Type="java.lang.Boolean"
+    IsQueriable="false"/>
+  <StaticList
+    Rows="6"
+    Columns="4"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      xmlns="http://xmlns.oracle.com/bc4j"
+      PropertiesFile="com.agawish.ux.model.ModelBundle"/>
+  </ResourceBundle>
+</ViewObject>

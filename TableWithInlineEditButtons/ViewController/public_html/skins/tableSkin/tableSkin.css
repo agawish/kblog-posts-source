@@ -1,0 +1,38 @@
+@charset "UTF-8";
+/**ADFFaces_Skin_File / DO NOT REMOVE**/
+@namespace af "http://xmlns.oracle.com/adf/faces/rich";
+@namespace dvt "http://xmlns.oracle.com/dss/adf/faces";
+
+.AFTableCellDataVGrid:alias {
+    border: 0px; 
+}
+
+af|table::data-row{
+    height: 30px;
+}
+
+.table-button{
+    visibility: hidden;
+}
+
+.mobile-only{
+    visibility:hidden;
+}
+
+
+
+af|table::data-row:highlighted .table-button,
+af|table::data-row:selected .table-button{
+    visibility: visible;
+}
+
+@media (max-width: 600px) {
+    af|table::data-row:highlighted .table-button,
+    af|table::data-row:selected .table-button{
+        visibility: hidden;
+    }
+    
+    .mobile-only{
+        visibility:visible;
+    }
+}

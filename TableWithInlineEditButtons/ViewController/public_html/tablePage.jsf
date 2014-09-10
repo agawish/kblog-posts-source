@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="table2.jsf" id="d1">
+        <af:messages id="m1"/>
+        <af:form id="f1">
+            <af:panelCollection id="pc1">
+                <f:facet name="menus"/>
+                <f:facet name="toolbar">
+                    <af:toolbar id="t2" styleClass="mobile-only">
+                        <af:button text="Edit" id="b3"/>
+                        <af:button text="Delete" id="b4"/>
+                    </af:toolbar>
+                </f:facet>
+                <f:facet name="statusbar"/>
+                <af:table value="#{bindings.Employees.collectionModel}" var="row" rows="#{bindings.Employees.rangeSize}"
+                          emptyText="#{bindings.Employees.viewable ? 'No data to display.' : 'Access Denied.'}"
+                          rowBandingInterval="0" fetchSize="#{bindings.Employees.rangeSize}" id="t1"
+                          rowSelection="single" selectionListener="#{bindings.Employees.collectionModel.makeCurrent}">
+                    <af:column headerText="#{bindings.Employees.hints.Name.label}" id="c1">
+                        <af:outputText value="#{row.bindings.Name.inputValue}"
+                                       shortDesc="#{bindings.Employees.hints.Name.tooltip}" id="it1"/>
+                    </af:column>
+                    <af:column headerText="#{bindings.Employees.hints.JobDescription.label}" id="c2">
+                        <af:outputText value="#{row.bindings.JobDescription.inputValue}"
+                                       shortDesc="#{bindings.Employees.hints.JobDescription.tooltip}" id="it2"/>
+                    </af:column>
+                    <af:column id="c3">
+                        <af:panelGroupLayout id="pgl1" layout="horizontal">
+                            <af:button text="Edit" id="b1" styleClass="table-button">
+                                <af:showPopupBehavior popupId=":p1" triggerType="action" align="overlap"/>
+                            </af:button>
+                            <af:spacer width="10" height="10" id="s1"/>
+                            <af:button text="Delete" id="b2" styleClass="table-button"/>
+                        </af:panelGroupLayout>
+                    </af:column>
+                </af:table>
+            </af:panelCollection>
+            <af:popup childCreation="deferred" autoCancel="disabled" id="p1" contentDelivery="lazyUncached">
+                <af:dialog id="d2" title="Edit Employee">
+                    <f:facet name="buttonBar">
+                        <af:panelFormLayout id="pfl1">
+                            <af:inputText value="#{bindings.employeeID.inputValue}"
+                                          label="#{bindings.employeeID.hints.label}"
+                                          required="#{bindings.employeeID.hints.mandatory}"
+                                          columns="#{bindings.employeeID.hints.displayWidth}"
+                                          maximumLength="#{bindings.employeeID.hints.precision}"
+                                          shortDesc="#{bindings.employeeID.hints.tooltip}" id="it3">
+                                <f:validator binding="#{bindings.employeeID.validator}"/>
+                                <af:convertNumber groupingUsed="false" pattern="#{bindings.employeeID.format}"/>
+                            </af:inputText>
+                            <af:inputText value="#{bindings.Name.inputValue}" label="#{bindings.Name.hints.label}"
+                                          required="#{bindings.Name.hints.mandatory}"
+                                          columns="#{bindings.Name.hints.displayWidth}"
+                                          maximumLength="#{bindings.Name.hints.precision}"
+                                          shortDesc="#{bindings.Name.hints.tooltip}" id="it4">
+                                <f:validator binding="#{bindings.Name.validator}"/>
+                            </af:inputText>
+                            <af:inputText value="#{bindings.JobDescription.inputValue}"
+                                          label="#{bindings.JobDescription.hints.label}"
+                                          required="#{bindings.JobDescription.hints.mandatory}"
+                                          columns="#{bindings.JobDescription.hints.displayWidth}"
+                                          maximumLength="#{bindings.JobDescription.hints.precision}"
+                                          shortDesc="#{bindings.JobDescription.hints.tooltip}" id="it5">
+                                <f:validator binding="#{bindings.JobDescription.validator}"/>
+                            </af:inputText>
+                        </af:panelFormLayout>
+                    </f:facet>
+                </af:dialog>
+            </af:popup>
+        </af:form>
+    </af:document>
+</f:view>

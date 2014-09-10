@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<DataControlConfigs xmlns="http://xmlns.oracle.com/adfm/configuration" version="12.1.3.10.8" id="DataControls"
+                    Package="com.agawish.ux.model">
+  <PlaceholderDataControl SupportsTransactions="true" SupportsFindMode="true" SupportsResetState="true"
+                          SupportsRangesize="true" SupportsSortCollection="true"
+                          FactoryClass="oracle.adf.model.placeholder.DataControlFactoryImpl" id="Testdata"
+                          xmlns="http://xmlns.oracle.com/adfm/datacontrol"
+                          Definition="com.agawish.ux.model.prototype.Testdata"
+                          Package="com.agawish.ux.model.prototype"/>
+</DataControlConfigs>
