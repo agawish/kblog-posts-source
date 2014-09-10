@@ -1,4 +1,4 @@
-kblog-posts-source
+ADF UX Pattern - Show table row actions on hover (Responsive)
 ==================
 
-KBLOG (http://blog.amr-gawish.com) posts repository to contain all source code applications
+Application source code of (ADF UX Pattern - Show table row actions on hover (Responsive))[http://blog.amr-gawish.com/?p=8006]
