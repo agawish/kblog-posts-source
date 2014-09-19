@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="index.jsf" id="d1">
+        <af:form id="f1">
+            <af:panelBox text="Click the button to show an auto-hiding information Faces Message" id="pb1">
+                <f:facet name="toolbar"/>
+                <af:panelGroupLayout id="pgl1" layout="vertical" styleClass="AFStretchWidth">
+                    <af:messages id="m1" inline="true" styleClass="auto-hide"/>
+                    <af:button text="Show information message" id="b1"
+                               action="#{notifications.showInformationMessage}"/>
+                </af:panelGroupLayout>
+            </af:panelBox>
+        </af:form>
+        <af:resource type="javascript" source="https://code.jquery.com/jquery-2.1.1.min.js" />
+    </af:document>
+</f:view>

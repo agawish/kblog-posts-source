@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skins xmlns="http://myfaces.apache.org/trinidad/skin">
+  <skin>
+    <id>autoHideSkin.desktop</id>
+    <family>autoHideSkin</family>
+    <extends>skyros-v1.desktop</extends>
+    <render-kit-id>org.apache.myfaces.trinidad.desktop</render-kit-id>
+    <style-sheet-name>skins/autoHideSkin/autoHideSkin.css</style-sheet-name>
+    <bundle-name>org.amr.gawi.sh.view.skinBundle</bundle-name>
+  </skin>
+</skins>
