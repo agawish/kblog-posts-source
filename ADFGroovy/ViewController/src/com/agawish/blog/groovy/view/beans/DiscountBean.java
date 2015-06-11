@@ -1,6 +1,5 @@
 package com.agawish.blog.groovy.view.beans;
 
-import groovy.lang.Binding;
 import groovy.lang.GroovyShell;
 
 import java.io.File;
@@ -21,10 +20,7 @@ public class DiscountBean {
             new File("C:\\Users\\amr\\dev\\ADFGroovy\\ViewController\\public_html\\WEB-INF\\discountvalue.groovy");
         String discountValue = "";
         if (discountFile.exists()) {
-            Binding binding = new Binding();
-
-            GroovyShell shell =
-                new GroovyShell(this.getClass().getClassLoader(), binding);
+            GroovyShell shell = new GroovyShell();
             Object value;
             value = shell.evaluate(discountFile);
             if (value != null) {
@@ -35,7 +31,7 @@ public class DiscountBean {
             //Calculate the amount of discount to subtract
             Double discount =
                 (Double.parseDouble(discountValue) / 100) * subtotal;
-            
+
             //Get the total
             total = subtotal - discount;
         }
